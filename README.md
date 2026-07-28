@@ -2,7 +2,7 @@
 
 
 
-\## Project Overview
+## Project Overview
 
 
 
@@ -18,7 +18,7 @@ The lab used a fictional banking scenario and authorised training data. It conta
 
 
 
-\## Key Outcomes
+## Key Outcomes
 
 
 
@@ -42,7 +42,7 @@ The investigation demonstrated that alert volume alone does not determine severi
 
 
 
-\## Skills Demonstrated
+## Skills Demonstrated
 
 
 
@@ -430,33 +430,33 @@ A production implementation should combine this rule with identity, endpoint, fi
 
 
 
-\## What I Would Improve in Production
+## What I Would Improve in Production
 
 
 
-\- Create a higher-severity rule for repeated failures followed by successful authentication.
+- Create a higher-severity rule for repeated failures followed by successful authentication.
 
-\- Add a password-spray rule based on the number of unique accounts targeted by one source.
+- Add a password-spray rule based on the number of unique accounts targeted by one source.
 
-\- Add a low-and-slow detection using a longer analysis period.
+- Add a low-and-slow detection using a longer analysis period.
 
-\- Tune thresholds using historical authentication baselines.
+- Tune thresholds using historical authentication baselines.
 
-\- Use continuous data connectors instead of manual log ingestion.
+- Use continuous data connectors instead of manual log ingestion.
 
-\- Add alert suppression and deduplication.
+- Add alert suppression and deduplication.
 
-\- Correlate authentication events with process-execution and endpoint telemetry.
+- Correlate authentication events with process-execution and endpoint telemetry.
 
-\- Enrich source IP entities with threat-intelligence information.
+- Enrich source IP entities with threat-intelligence information.
 
-\- Automate containment actions only after appropriate validation.
+- Automate containment actions only after appropriate validation.
 
-\- Track detection performance using false-positive and false-negative reviews.
+- Track detection performance using false-positive and false-negative reviews.
 
 
 
-\## Repository Structure
+## Repository Structure
 
 
 
@@ -530,7 +530,7 @@ microsoft-sentinel-soc-lab/
 
 
 
-\## Responsible Use and Attribution
+## Responsible Use and Attribution
 
 
 
@@ -546,7 +546,7 @@ The original dataset, training guide, ingestion scripts, credentials and unredac
 
 
 
-\## Cloud Cleanup
+## Cloud Cleanup
 
 
 
@@ -562,7 +562,7 @@ This removed the Sentinel deployment, Log Analytics workspace, custom table, ana
 
 
 
-\## Key Takeaway
+## Key Takeaway
 
 
 

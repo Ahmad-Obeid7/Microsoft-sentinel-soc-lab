@@ -1,4 +1,4 @@
-\# Microsoft Sentinel SOC Detection and Triage Lab
+# Microsoft Sentinel SOC Detection and Triage Lab
 
 
 

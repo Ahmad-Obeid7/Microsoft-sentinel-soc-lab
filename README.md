@@ -1,12 +1,25 @@
 # Microsoft Sentinel SOC Detection and Triage Lab
 
-## Project Overview
+> End-to-end SOC investigation using Microsoft Sentinel, Azure Log Analytics and KQL, covering log ingestion, threat hunting, scheduled detection, incident triage, MITRE ATT&CK mapping and reporting.
 
-This project demonstrates an end-to-end Security Operations Centre workflow using Microsoft Sentinel, Azure Log Analytics and Kusto Query Language (KQL).
+## Project Summary
 
-I deployed a cloud-based SIEM, ingested a controlled SSH authentication dataset, developed threat-hunting queries, converted detection logic into a scheduled analytics rule, and investigated the resulting incidents through to classification and closure.
+I deployed Microsoft Sentinel, ingested 292 controlled SSH authentication events and developed nine KQL hunting and investigation queries.
 
-The lab used a fictional banking scenario and authorised training data. It contained 291 source log records plus one ingestion test record, resulting in 292 events inside the custom Log Analytics table.
+I converted the detection logic into a scheduled analytics rule and investigated three resulting incidents:
+
+- Confirmed SSH account compromise
+- Password-spray attempt
+- Benign automated backup failure
+
+The project demonstrates that alert volume alone does not determine severity: the highest-volume source was benign, while a lower-volume source successfully compromised an account.
+
+## Quick Links
+
+- [View KQL Queries](queries/)
+- [Read the Detection and Response Report](report/detection-and-response-report.md)
+- [View Investigation Evidence](screenshots/)
+- [View the Sentinel Workbook](#sentinel-workbook)
 
 ## Key Outcomes
 
@@ -18,36 +31,33 @@ The detection identified three suspicious source IP addresses:
 | `198.51.100.23` | One external source targeting 11 different accounts | True Positive — Password-spray attempt |
 | `10.20.14.9` | Internal backup service retrying an outdated password every 60 seconds | Benign Positive — Misconfigured backup job |
 
-The investigation demonstrated that alert volume alone does not determine severity. The highest-volume source was benign, while a lower-volume source successfully compromised an account.
+## Tools and Skills
 
-## Skills Demonstrated
-
-- Microsoft Sentinel deployment and configuration
+**SIEM and Cloud**
+- Microsoft Sentinel
 - Azure Log Analytics
-- Kusto Query Language (KQL)
-- Log ingestion and custom tables
+- Azure Monitor Logs Ingestion API
 - Data Collection Endpoints and Data Collection Rules
+
+**Detection and Investigation**
+- Kusto Query Language
 - Threat hunting
 - Scheduled analytics rules
 - Entity mapping and alert grouping
 - Incident triage and classification
 - Detection tuning
 - MITRE ATT&CK mapping
-- Sentinel Workbooks
+
+**Reporting and Visualisation**
+- Microsoft Sentinel Workbooks
 - Evidence-based incident reporting
+- Remediation recommendations
 - Azure resource cleanup
 
-## Technologies Used
-
-- Microsoft Azure
-- Microsoft Sentinel
-- Azure Log Analytics
-- Azure Monitor Logs Ingestion API
-- Kusto Query Language
-- Microsoft Sentinel Analytics
-- Microsoft Sentinel Incidents
-- Microsoft Sentinel Workbooks
-- PowerShell and Azure Cloud Shell
+**Supporting Tools**
+- PowerShell
+- Azure Cloud Shell
+- Git and GitHub
 
 ## Architecture and Workflow
 
